@@ -1,0 +1,65 @@
+<!--pages/publish_1/publish_1.wxml-->
+<view class="center">
+<form class="weui-form__control-area" style="margin-top:64px;" bindsubmit="next_step">
+	<view class="weui-cells__group weui-cells__group_form">
+		<view class="weui-cells__title">基本信息</view>
+		<view class="weui-cells weui-cells_form">
+			<view class="weui-cell weui-cell_active">
+				<view class="weui-cell__hd"><label class="weui-label">活动名称</label></view>
+				<view class="weui-cell__bd">
+					<input class="weui-input" placeholder="填写活动名称" placeholder-class="weui-input__placeholder" name="active_name"/>
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_active">
+				<view class="weui-cell__hd">
+					<label class="weui-label">活动组织</label>
+				</view>
+				<view class="weui-cell__bd">
+					<input class="weui-input" placeholder="填写承办方" placeholder-class="weui-input__placeholder" name="holder" />
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_active">
+				<view class="weui-cell__hd">
+					<label class="weui-label">参与者范围</label>
+				</view>
+				<view class="weui-cell__bd">
+					<input class="weui-input" placeholder="限哪些人参加" placeholder-class="weui-input__placeholder" name="range" />
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+				<view class="weui-cell__hd">
+					<label class="weui-label" style="width: 3em">类别</label>
+				</view>
+				<view class="weui-cell__bd">
+					<picker bindchange="bindCategoryChange" value="{{catevalue}}" range="{{category}}">
+						<view class="weui-select">{{category[catevalue]}}</view>
+					</picker>
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+				<view class="weui-cell__hd">
+					<label class="weui-label" style="width: 3em">权限</label>
+				</view>
+				<view class="weui-cell__bd">
+					<picker bindchange="bindAuthorityChange" value="{{catevalue}}" range="{{authority}}">
+						<view class="weui-select">{{authority[authvalue]}}</view>
+					</picker>
+				</view>
+			</view>
+      <view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+				<view class="weui-cell__hd">
+					<label class="weui-label" style="width: 3em">参与方式</label>
+				</view>
+				<view class="weui-cell__bd">
+					<picker bindchange="bindModeChange" value="{{joinMode}}" range="{{modeIndex}}">
+						<view class="weui-select">{{joinMode[modeIndex]}}</view>
+					</picker>
+				</view>
+			</view>
+	</view>
+  </view>
+	<view class="weui-form__opr-area" style="margin-top:32px;">
+		<button class="weui-btn weui-btn_primary" form-type="submit">下一步</button>
+	</view>
+</form>
+</view>

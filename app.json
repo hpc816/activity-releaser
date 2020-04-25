@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/sort/sort",
+    "pages/register/register",
+    "pages/message/message",
+    "pages/my/my",
+    "pages/my/myActivity",
+    "pages/activity/activity",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ADD8E6",
+    "navigationBarTitleText": "活动立即知",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ADD8E6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/首页2.png",
+        "selectedIconPath": "image/首页.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "image/消息2.png",
+        "selectedIconPath": "image/消息.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "image/眼睛.png",
+        "selectedIconPath": "image/我的.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

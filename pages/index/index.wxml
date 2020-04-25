@@ -1,0 +1,76 @@
+<view class="container">
+  <view class='page_row' bindtap="search">
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='17' type='search'></icon>
+        <input class="sousuo" disabled placeholder="搜索" bindtap='search' />
+      </view>
+    </view>
+  </view>
+  <view class="sort">
+  <navigator url='../sort/sort' class='item-link'>分类</navigator>
+    <image class="publish" src="/image/发布.png" mode="aspectFit" bindtap="jumpToPublish"> 
+    <!-- <navigator url='../publish_1/publish_1' class='item-link'>发布活动</navigator>  -->
+     </image> 
+  </view>
+  <text class="content">
+      <image class="activity-avatar" src="{{activities.userImage}}" mode="aspectFill"></image>
+      <text class="activity-nickname">{{activities.nickName}}</text>
+  </text>
+</view>
+<view class="top-tab flex-wrp flex-tab " >
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+
+<view class="container2" >
+  <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+  <view wx:for="{{activities}}" wx:for-item="activity" wx:key="*this">
+   <view class="tj">
+   <view class="weui-panel" >
+			<view class="weui-panel__hd">
+      <image class="activities-avatar" src="{{activity.userImage}}" mode="aspectFill"></image>
+      {{activity.nickName}}
+      </view>
+			<view class="weui-panel__bd">
+				<view class="weui-media-box weui-media-box_text">
+					<h4 class="weui-media-box__title"> 活动名：{{activity.basic_data['active_name']}}</h4>
+					<view class="weui-media-box__desc">{{activity.content['main_content']}}</view>
+					<view class="weui-media-box__info">
+						<view class="weui-media-box__info__meta">{{activity.basic_data['holder']}}</view>
+						<view class="weui-media-box__info__meta">{{activity.basic_data['joinMode']}}</view>
+						<view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{activity.basic_data['category']}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+   </view>
+</view>
+
+  </view>
+  <view class="ctnt1" hidden="{{currentNavtab==1 ? '' : true}}">
+    <view class="rm">热门活动1:
+          活动时间：2020.4.20
+          参与方式：线上/线下
+          <navigator class="d2" hover-class="d1">详情</navigator>
+    </view>
+    <view class="rm">热门活动2:
+          活动时间：2020.4.20
+          参与方式：线上/线下
+          <navigator class="d2" hover-class="d1">详情</navigator>
+    </view>
+  </view>
+  <view class="ctnt2" hidden="{{currentNavtab==2 ? '' : true}}">
+     <view class="cs">收藏活动1:
+          活动时间：2020.4.20
+          参与方式：线上/线下
+       <navigator class="d3" hover-class="d2">详情</navigator>
+    </view>
+    <view class="cs">收藏活动2:
+          活动时间：2020.4.20
+          参与方式：线上/线下
+      <navigator class="d3" hover-class="d2">详情</navigator>
+    </view>
+  </view>
+</view>

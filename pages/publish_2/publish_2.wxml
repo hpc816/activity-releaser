@@ -1,0 +1,50 @@
+<!--pages/publish_2/publish_2.wxml-->
+<form class="weui-form" bindsubmit="finish">
+	<view class="weui-form__control-area">
+		<view class="weui-cells__group weui-cells__group_form">
+			<view class="weui-cells__title">活动主要内容</view>
+			<view class="weui-cells weui-cells_form">
+				<view class="weui-cell ">
+					<view class="weui-cell__bd">
+						<textarea class="weui-textarea" value="{{content.main_content}}" placeholder="填写主要内容（0~500字，含标点）" rows="5" maxlength="500" name="main_content" bindinput="bindMainInput"></textarea>
+						<view class="weui-textarea-counter"><text>{{content.main_content.length}}</text>/500</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	
+	<view class="page__bd">
+		<view class="weui-cells">
+			<view class="weui-cell">
+				<view class="weui-cell__bd">
+					<view class="weui-uploader">
+						<view class="weui-uploader__hd">
+							<view class="weui-uploader__overview">
+								<view class="weui-uploader__title">图片上传</view>
+								<view class="weui-uploader__info">{{files.length}}/9</view>
+							</view>
+						</view>
+						<view class="weui-uploader__bd">
+							<view class="weui-uploader__files" id="uploaderFiles">
+								<block wx:for="{{files}}" wx:key="*this">
+									<view class="weui-uploader__file" style="position:relative;" bindtap="previewImage" id="{{item}}">
+										<image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+										<view class="image-remove" catchtap="removeImage" data-index="{{index}}">x</view>
+									</view>
+								</block>
+							</view>
+							<view class="weui-uploader__input-box" wx:if='{{files.length<9}}'>
+								<view class="weui-uploader__input" bindtap="chooseImage"></view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="weui-form__opr-area">
+		<a class="weui-btn weui-btn_default" bindtap="lastStep">上一步</a>
+		<button class="weui-btn weui-btn_primary" form-type="submit">完成</button>
+	</view>
+</form>

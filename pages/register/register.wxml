@@ -1,0 +1,49 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+  <view class="header" wx:if="{{flag1}}">
+    <view class="strong">注意：</view>
+    所填信息将无法再此更改，请谨慎填写！
+  </view>
+  <view class="center">
+<form class="weui-form__control-area" style="margin-top:64px;" bindsubmit="next_step">
+	<view class="weui-cells__group weui-cells__group_form">
+		<view class="weui-cells__title">基本信息</view>
+		</view>
+    <view class="weui-cells weui-cells_form">
+			<view class="weui-cell weui-cell_active">
+				<view class="weui-cell__hd"><label class="weui-label">姓名</label></view>
+				<view class="weui-cell__bd">
+					<input class="weui-input" placeholder="填写您的真实姓名" placeholder-class="weui-input__placeholder" name="name" value="{{name}}" disabled="{{flag}}"/>
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_active">
+				<view class="weui-cell__hd">
+					<label class="weui-label">学号</label>
+				</view>
+				<view class="weui-cell__bd">
+					<input class="weui-input" placeholder="填写您的学号" placeholder-class="weui-input__placeholder" name="idNum" value="{{idNum}}" disabled="{{flag}}"/>
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_active">
+				<view class="weui-cell__hd">
+					<label class="weui-label">学校</label>
+				</view>
+				<view class="weui-cell__bd">
+					<input class="weui-input" placeholder="填写您所在的学校" placeholder-class="weui-input__placeholder" name="school" value="{{school}}" disabled="{{flag}}"/>
+				</view>
+			</view>
+      	<view class="weui-cell weui-cell_active">
+				<view class="weui-cell__hd">
+					<label class="weui-label">学院</label>
+				</view>
+				<view class="weui-cell__bd">
+					<input class="weui-input" placeholder="填写您所在的学院" placeholder-class="weui-input__placeholder" name="academy" value="{{academy}}" disabled="{{flag}}"/>
+				</view>
+			</view>
+			</view>
+	<view class="weui-form__opr-area" style="margin-top:32px;" wx:if="{{flag1}}">
+		<button class="weui-btn weui-btn_primary" form-type="submit">提交</button>
+	</view>
+</form>
+</view>
+</view>

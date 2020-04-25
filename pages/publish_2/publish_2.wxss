@@ -1,0 +1,16 @@
+/* pages/publish_2/publish_2.wxss */
+.image-remove {
+  background-color: white;
+  color: rgb(142, 142, 142);
+  font-size: 12px;
+  width: 20%;
+  height: 20%;
+  text-align: center;
+  border-radius: 100%;
+  cursor: pointer;
+  opacity: 0.5;
+  top: 2px;
+  right: 2px;
+  display: block;
+  position: absolute;
+}

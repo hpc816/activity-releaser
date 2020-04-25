@@ -1,0 +1,140 @@
+.search{
+  width: 100%;
+}
+.search_arr {
+  border: 1rpx solid #d0d0d0;
+  border-radius: 10rpx;
+  margin-top:10rpx;
+}
+.search_arr input{
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+} 
+.sousuo {
+  padding-left: 38%;
+  width: 15%;
+  line-height: 150%;
+  text-align: center;
+}
+.page_row{
+  display: flex;
+  flex-direction: row
+}
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  margin-left:38%;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+}
+.container{
+  width:100%;
+  height:100%;
+  padding:10rpx,10rpx,10rpx,10rpx;
+  border: 1rpx solid #97ddee;
+}
+.sort{
+  background-color: #97ddee;
+  width:100%;
+  border: 1rpx solid #d0d0d0;
+  margin-top:10rpx;
+  padding:10px;
+}
+.item-link{
+  text-align: center;
+  font-style: bold;
+  font-size:14px;
+  color:red;
+}
+.publish{
+  position:fixed; 
+  top: 400px;
+  left: 250px;
+  height: 50px;
+  width: 50px;
+  z-index: 9999;
+}
+.container2{
+  position: absolute;
+} 
+.top-tab{
+  width: 750rpx;
+  height: 100rpx; 
+  background:#97ddee;
+  color: black;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  box-shadow: 0 2px 2px #bebebe;
+  margin: 0 0 10rpx 0;
+  z-index: 9999; 
+}
+.tj{
+  width: 100%;
+  height: 100px;
+  background-color: snow;
+  border-radius: 25px;
+  box-shadow: 5px 8px 30px rgba(53,178,225,0.26);
+  margin: 0 0 8rpx 0;
+}
+.rm{
+  width: 100%;
+  height: 100px;
+  background-color: snow;
+  border-radius: 25px;
+  box-shadow: 5px 8px 30px rgba(225,50,57,0.26);
+  margin: 0 0 8rpx 0;
+}
+.cs{
+  width: 100%;
+  height: 100px;
+  background-color: snow;
+  border-radius: 25px;
+  box-shadow: 5px 8px 30px rgba(225,178,57,0.26);
+  margin: 0 0 8rpx 0;
+}
+.d1{
+  color: cyan;
+  position: absolute;
+  left: 250px;
+}
+.d2{
+  color: crimson;
+  position: absolute;
+  left: 250px;
+}
+.d3{
+  color: gold;
+  position: absolute;
+  left: 250px;
+}
+.flex-wrp{
+  display: flex;
+}
+.flex-tab{
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.toptab.active{
+  color: #ffffff;
+  border-bottom: solid 2px #ffffff;
+}
+
+.placehold{
+  font-size: 28rpx;
+  padding: 80rpx 0;
+}
+
+.activities-avatar{
+  border-radius:50rpx;
+  height:20px;
+  width:20px;
+}
+.ctnt0{
+  
+  width:100%;
+}

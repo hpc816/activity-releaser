@@ -1,0 +1,9 @@
+/* pages/publish_1/publish_1.wxss */
+.weui-select {
+  left:34px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}

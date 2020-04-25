@@ -1,0 +1,41 @@
+<!--pages/sort/sort.wxml-->
+
+<view class="section">
+  <view class="section__title">选择学校:</view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">选择学院:</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">选择活动类型:</view>
+  <picker bindchange="bindPickerChangeStyle" value="{{activityIndex}}" range="{{activityStyle}}">
+    <view class="picker">
+      当前选择：{{activityStyle[activityIndex]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">参与方式:</view>
+  <picker bindchange="bindPickerChangeMode" value="{{modeIndex}}" range="{{modeArray}}">
+    <view class="picker">
+      当前选择：{{modeArray[modeIndex]}}
+    </view>
+  </picker>
+</view>
+<view class="button-sp-area">
+			<a class="weui-btn weui-btn_mini weui-btn_primary" bindtap="repeat">重置</a>
+			<a class="weui-btn weui-btn_mini weui-btn_default">确定</a>
+			<a class="weui-btn weui-btn_mini weui-btn_warn" bindtap="cancel">取消</a>
+		</view>
+
+

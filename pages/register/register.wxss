@@ -1,0 +1,21 @@
+/* pages/register/register.wxss */
+.container{
+  border:1rpx,solid,#90ddcc;
+  padding:10px;
+}
+.header{
+  border:2rpx,solid,#221563;
+  color:red;
+}
+.strong{
+  font-size: 18px;
+  font-style: bold;
+}
+.weui-select {
+  left:34px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
